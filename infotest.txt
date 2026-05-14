@@ -1,0 +1,28 @@
+first in need result in arabic i am learn nodejs with jonas Natours Application i have problem i can use mapbox to include map because mabbox need bayment ccard i need other map libaray and how to  write new code to complete the project 
+
+
+importent 
+
+i am learn scurity in vertual os i scan microtic i am learn how to get free net work and how can block it this info n-TECRA-Z50-C:~$ nmap -Pn -sV -p  80,443,3128,8080, 192.168.3.1
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-05-08 18:50 CAT
+Nmap scan report for 192.168.3.1
+Host is up.
+
+PORT     STATE    SERVICE    VERSION
+80/tcp   filtered http
+443/tcp  filtered https
+3128/tcp filtered squid-http
+8080/tcp filtered http-proxy
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.36 seconds
+abdelrhman@abdelrhman-TECRA-Z50-C:~$ nmap -Pn -sV -p  8291 192.168.3.1
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-05-08 18:51 CAT
+Nmap scan report for 192.168.3.1
+Host is up.
+
+PORT     STATE    SERVICE VERSION
+8291/tcp filtered unknown
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 15.25 seconds
