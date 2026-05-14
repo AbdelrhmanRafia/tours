@@ -17,7 +17,7 @@ class Email {
       port: 587,
       secure: false,
       auth: {
-        user: process.env.BREVO_EMAIL,
+        user: process.env.EMAIL,
         pass: process.env.BREVO_SMTP_KEY,
       },
     });

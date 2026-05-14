@@ -3,7 +3,7 @@ export const login = async (email, password) => {
   const body = JSON.stringify({ email, password });
   // local
   // const url = "http://localhost:3000/api/v1/users/login";
-  const url = "api/v1/users/login";
+  const url = "/api/v1/users/login";
   const options = {
     method: "POST",
     headers: { "content-type": "application/json" },
