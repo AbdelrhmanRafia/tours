@@ -1,1 +1,188 @@
 
+/* --- أضف هذه الأكواد في نهاية ملف style.css الخاص بك --- */
+
+/* 1. تعديل حجم الخط الأساسي لتصغير العناصر تدريجياً */
+@media only screen and (max-width: 75em) { /* 1200px */
+  html { font-size: 56.25%; } 
+}
+
+@media only screen and (max-width: 56.25em) { /* 900px */
+  html { font-size: 50%; } 
+}
+
+/* 2. تعديل الهيدر والقائمة للموبايل */
+@media only screen and (max-width: 37.5em) { /* 600px */
+  html { font-size: 43.75%; }
+  
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .nav--tours { margin-bottom: 1.5rem; }
+  .nav__el:not(:last-child) { margin-right: 1.5rem !important; }
+  
+  body { padding: 0; }
+}
+
+/* 3. تعديل عرض الكروت (Tour Cards) */
+@media only screen and (max-width: 64em) { /* التابلت */
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) { /* الموبايل */
+  .card-container {
+    grid-template-columns: 1fr;
+    padding: 0 3rem;
+  }
+}
+
+/* 4. تعديل قسم الوصف (About Section) */
+@media only screen and (max-width: 56.25em) {
+  .section-description {
+    flex-direction: column;
+  }
+  
+  .section-description > * {
+    padding: 10rem 5rem;
+    flex: 0 0 100%;
+  }
+}
+
+/* 5. تعديل الفوتر (Footer) */
+@media only screen and (max-width: 50em) {
+  .footer {
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+    justify-items: center;
+    text-align: center;
+  }
+  
+  .footer__nav { justify-content: center; }
+}
+
+
+/* --- Account Settings Page ( /me ) Responsiveness --- */
+
+@media only screen and (max-width: 68.75em) { /* 1100px */
+  .user-view {
+    flex-direction: column;
+  }
+  
+  /* القائمة الجانبية تصبح أفقية */
+  .user-view__menu {
+    flex: 0 0 100%;
+    display: flex;
+    padding: 2rem 0;
+    justify-content: center;
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  }
+
+  .side-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .side-nav li {
+    margin: 0 1rem;
+  }
+
+  .side-nav--active::before {
+    display: none; /* إخفاء الخط الجانبي في وضع الموبايل */
+  }
+
+  .user-view__content {
+    padding: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) { /* 600px للموبايل */
+  .user-view__form-container {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .form__group {
+    margin-bottom: 1.5rem;
+  }
+
+  /* جعل المدخلات (Inputs) تأخذ العرض الكامل */
+  .form__input {
+    width: 100%;
+  }
+
+  /* ترتيب قسم رفع الصورة */
+  .form__photo-upload {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form__user-photo {
+    margin-bottom: 1.5rem;
+    margin-right: 0;
+  }
+
+  /* جعل القائمة الجانبية عمودية مرة أخرى ولكن مبسطة للموبايل */
+  .side-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* --- Fix Side Bar for Small Screens (/me page) --- */
+
+@media only screen and (max-width: 56.25em) { /* الشاشات الأصغر من 900px */
+  .user-view {
+    display: flex;
+    flex-direction: column; /* تحويل الترتيب من أفقي إلى عمودي */
+  }
+
+  .user-view__menu {
+    width: 100%; /* القائمة تأخذ العرض الكامل */
+    padding: 2rem 0;
+    background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
+  }
+
+  .side-nav {
+    display: flex;
+    flex-direction: row; /* جعل عناصر القائمة بجانب بعضها بدلاً من عمودية */
+    justify-content: center;
+    flex-wrap: wrap; /* للسماح للعناصر بالنزول لسطر جديد إذا كانت كثيرة */
+  }
+
+  .side-nav li {
+    margin: 0.5rem 1.5rem;
+  }
+
+  .side-nav--active::before {
+    display: none; /* إخفاء الخط الجانبي الصغير لأنه لا يناسب الوضع الأفقي */
+  }
+
+  .side-nav a:link,
+  .side-nav a:visited {
+    padding: 1rem 1.5rem;
+  }
+
+  .user-view__content {
+    width: 100%;
+    padding: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) { /* للموبايل الصغير جداً */
+  .side-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* تقسيم القائمة لعمودين في الموبايل */
+    gap: 1rem;
+    padding: 0 2rem;
+  }
+  
+  .side-nav li {
+    margin: 0;
+  }
+}
